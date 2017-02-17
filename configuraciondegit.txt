@@ -1,0 +1,196 @@
+
+Sebastian Alfonso@LAPTOP-AT871SMR MINGW64 ~
+$ cd
+
+Sebastian Alfonso@LAPTOP-AT871SMR MINGW64 ~
+$ cd /c
+
+Sebastian Alfonso@LAPTOP-AT871SMR MINGW64 /c
+$ ls
+'$Recycle.Bin'/            pagefile.sys
+'Archivos de programa'@    PerfLogs/
+Boot/                      'Program Files'/
+bootmgr                    'Program Files (x86)'/
+BOOTNXT                    ProgramData/
+Config.Msi/                Recovery/
+'Documents and Settings'@  swapfile.sys
+git/                       'System Volume Information'/
+hiberfil.sys               UserGuidePDF/
+Intel/                     Users/
+OneDriveTemp/              Windows/
+
+Sebastian Alfonso@LAPTOP-AT871SMR MINGW64 /c
+$ cd git/
+
+Sebastian Alfonso@LAPTOP-AT871SMR MINGW64 /c/git
+$ ls
+
+Sebastian Alfonso@LAPTOP-AT871SMR MINGW64 /c/git
+$ git config --global user.name "jsalfonsor"
+
+Sebastian Alfonso@LAPTOP-AT871SMR MINGW64 /c/git
+$ git config --global user.email jsalfonsor@unal.edu.co
+
+Sebastian Alfonso@LAPTOP-AT871SMR MINGW64 /c/git
+$ git clone https://github.com/jsalfonsor/TestGit.git
+Cloning into 'TestGit'...
+remote: Counting objects: 3, done.
+remote: Total 3 (delta 0), reused 0 (delta 0), pack-reused 0
+Unpacking objects: 100% (3/3), done.
+
+Sebastian Alfonso@LAPTOP-AT871SMR MINGW64 /c/git
+$ ls
+TestGit/
+
+Sebastian Alfonso@LAPTOP-AT871SMR MINGW64 /c/git
+$
+
+Sebastian Alfonso@LAPTOP-AT871SMR MINGW64 /c/git
+$ cd TestGit/
+
+Sebastian Alfonso@LAPTOP-AT871SMR MINGW64 /c/git/TestGit (master)
+$ ls
+README.md
+
+Sebastian Alfonso@LAPTOP-AT871SMR MINGW64 /c/git/TestGit (master)
+$ ls
+README.md  test.txt.txt
+
+Sebastian Alfonso@LAPTOP-AT871SMR MINGW64 /c/git/TestGit (master)
+$ ls
+README.md  test.txt
+
+Sebastian Alfonso@LAPTOP-AT871SMR MINGW64 /c/git/TestGit (master)
+$ git add.txt
+git: 'add.txt' is not a git command. See 'git --help'.
+
+Sebastian Alfonso@LAPTOP-AT871SMR MINGW64 /c/git/TestGit (master)
+$ git add test.txt
+
+
+Sebastian Alfonso@LAPTOP-AT871SMR MINGW64 /c/git/TestGit (master)
+$
+
+Sebastian Alfonso@LAPTOP-AT871SMR MINGW64 /c/git/TestGit (master)
+$ git status
+On branch master
+Your branch is up-to-date with 'origin/master'.
+Changes to be committed:
+  (use "git reset HEAD <file>..." to unstage)
+
+        new file:   test.txt
+
+
+Sebastian Alfonso@LAPTOP-AT871SMR MINGW64 /c/git/TestGit (master)
+$ git comit -m "Primer Comentario" test.txt
+git: 'comit' is not a git command. See 'git --help'.
+
+Did you mean this?
+        commit
+
+Sebastian Alfonso@LAPTOP-AT871SMR MINGW64 /c/git/TestGit (master)
+$ git commit -m "Primer Comentario" test.txt
+[master 888189d] Primer Comentario
+ 1 file changed, 1 insertion(+)
+ create mode 100644 test.txt
+
+Sebastian Alfonso@LAPTOP-AT871SMR MINGW64 /c/git/TestGit (master)
+$ git push -u origin master
+Counting objects: 3, done.
+Delta compression using up to 4 threads.
+Compressing objects: 100% (2/2), done.
+Writing objects: 100% (3/3), 301 bytes | 0 bytes/s, done.
+Total 3 (delta 0), reused 0 (delta 0)
+Branch master set up to track remote branch master from origin.
+To https://github.com/jsalfonsor/TestGit.git
+   9b21a3c..888189d  master -> master
+
+Sebastian Alfonso@LAPTOP-AT871SMR MINGW64 /c/git/TestGit (master)
+$ git clone https://github.com/ProgrammingNumerical/workshop-test-jsalfonsor.git
+Cloning into 'workshop-test-jsalfonsor'...
+warning: You appear to have cloned an empty repository.
+
+Sebastian Alfonso@LAPTOP-AT871SMR MINGW64 /c/git/TestGit (master)
+$ ls
+README.md  test.txt  workshop-test-jsalfonsor/
+
+Sebastian Alfonso@LAPTOP-AT871SMR MINGW64 /c/git/TestGit (master)
+$ cd workshop-test-jsalfonsor/
+
+Sebastian Alfonso@LAPTOP-AT871SMR MINGW64 /c/git/TestGit/workshop-test-jsalfonsor (master)
+$ ls
+A.txt
+
+Sebastian Alfonso@LAPTOP-AT871SMR MINGW64 /c/git/TestGit/workshop-test-jsalfonsor (master)
+$ ls
+A.txt  B.txt
+
+Sebastian Alfonso@LAPTOP-AT871SMR MINGW64 /c/git/TestGit/workshop-test-jsalfonsor (master)
+$ git add A.txt
+
+Sebastian Alfonso@LAPTOP-AT871SMR MINGW64 /c/git/TestGit/workshop-test-jsalfonsor (master)
+$ git status
+On branch master
+
+Initial commit
+
+Changes to be committed:
+  (use "git rm --cached <file>..." to unstage)
+
+        new file:   A.txt
+
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+
+        B.txt
+
+
+Sebastian Alfonso@LAPTOP-AT871SMR MINGW64 /c/git/TestGit/workshop-test-jsalfonsor (master)
+$ git add B.txt
+
+Sebastian Alfonso@LAPTOP-AT871SMR MINGW64 /c/git/TestGit/workshop-test-jsalfonsor (master)
+$ git status
+On branch master
+
+Initial commit
+
+Changes to be committed:
+  (use "git rm --cached <file>..." to unstage)
+
+        new file:   A.txt
+        new file:   B.txt
+
+
+Sebastian Alfonso@LAPTOP-AT871SMR MINGW64 /c/git/TestGit/workshop-test-jsalfonsor (master)
+$ git commit -m "quiz mañana" A.txt
+[master (root-commit) c16c9fa] quiz mañana
+ 1 file changed, 2 insertions(+)
+ create mode 100644 A.txt
+
+Sebastian Alfonso@LAPTOP-AT871SMR MINGW64 /c/git/TestGit/workshop-test-jsalfonsor (master)
+$ git commit .m "Estudiando a ultima hora" B.txt
+error: pathspec '.m' did not match any file(s) known to git.
+error: pathspec 'Estudiando a ultima hora' did not match any file(s) known to git.
+
+Sebastian Alfonso@LAPTOP-AT871SMR MINGW64 /c/git/TestGit/workshop-test-jsalfonsor (master)
+$ git commit -m "Estudiando a ultima hora" B.txt
+[master 8ceceaf] Estudiando a ultima hora
+ 1 file changed, 1 insertion(+)
+ create mode 100644 B.txt
+
+Sebastian Alfonso@LAPTOP-AT871SMR MINGW64 /c/git/TestGit/workshop-test-jsalfonsor (master)
+$ git push -u origin master
+Counting objects: 6, done.
+Delta compression using up to 4 threads.
+Compressing objects: 100% (3/3), done.
+Writing objects: 100% (6/6), 468 bytes | 0 bytes/s, done.
+Total 6 (delta 0), reused 0 (delta 0)
+Branch master set up to track remote branch master from origin.
+To https://github.com/ProgrammingNumerical/workshop-test-jsalfonsor.git
+ * [new branch]      master -> master
+
+Sebastian Alfonso@LAPTOP-AT871SMR MINGW64 /c/git/TestGit/workshop-test-jsalfonsor (master)
+$ ^C
+
+Sebastian Alfonso@LAPTOP-AT871SMR MINGW64 /c/git/TestGit/workshop-test-jsalfonsor (master)
+$
